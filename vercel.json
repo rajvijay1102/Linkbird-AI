@@ -1,15 +1,8 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "vercel/api/index.ts",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist/spa" }
-    }
+    { "src": "vercel/api/index.ts", "use": "@vercel/node" },
+    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist/spa" } }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "vercel/api/index.ts" },
